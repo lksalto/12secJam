@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed = 15f;
     public Vector2 forceToApply;
     public float forceDamping;
+
+    [SerializeField] FieldOfView fieldOfView;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
+        Aim();
     }
 
     void Move()
@@ -32,5 +36,24 @@ public class PlayerMovement : MonoBehaviour
             forceToApply = Vector2.zero;
         }
         rb.velocity = moveForce;
+    }
+    void Aim()
+    {
+        // Get the mouse position in world space
+        Vector3 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        // Calculate the direction vector from the object to the mouse position
+        Vector3 aimDir = (targetPosition - transform.position).normalized;
+
+        // Calculate the rotation to face the mouse position
+        float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
+        Quaternion lookRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        // Apply the rotation to the object
+        transform.rotation = lookRotation;
+
+        // Optionally, set the aim direction and origin for your field of view logic
+        fieldOfView.SetAimDirection(aimDir);
+        fieldOfView.SetOrigin(transform.position);
     }
 }
