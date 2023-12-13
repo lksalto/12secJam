@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: b56fb24741969a348961859137056c41
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: preview-raptor-pounce-attack_Frame_0
+    originalName: 
+    pivot: {x: 1.1929824, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 83
+      width: 57
+      height: 13
+    spriteID: 9d5751df888e11745a74ce85256bab70
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 83}
+  - name: preview-raptor-pounce-attack_Frame_1
+    originalName: 
+    pivot: {x: 1.1818181, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 83
+      width: 55
+      height: 13
+    spriteID: 4a09bfb771aa3404784c815128eb24f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 83}
+  - name: preview-raptor-pounce-attack_Frame_2
+    originalName: 
+    pivot: {x: 1.2045455, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 4
+      width: 44
+      height: 35
+    spriteID: 409dd54b9af67cd4bbd93c39fb1d4a68
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 4}
+  - name: preview-raptor-pounce-attack_Frame_3
+    originalName: 
+    pivot: {x: 0.9516129, y: -0.05263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 97
+      y: 4
+      width: 62
+      height: 38
+    spriteID: bc111077dc84e084fa03a9dfee68badf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 97, y: 4}
+  - name: preview-raptor-pounce-attack_Frame_4
+    originalName: 
+    pivot: {x: 0.77647066, y: -0.13157895}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 85
+      height: 38
+    spriteID: 0412f3c1354a20d4aa44eb50f020c47c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: preview-raptor-pounce-attack_Frame_5
+    originalName: 
+    pivot: {x: -0.09374997, y: -0.20000002}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 219
+      y: 4
+      width: 32
+      height: 30
+    spriteID: 30d6d2b9ec306924fb24a419b552c1d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 219, y: 4}
+  - name: preview-raptor-pounce-attack_Frame_6
+    originalName: 
+    pivot: {x: -0.2812499, y: -0.06666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 83
+      width: 32
+      height: 30
+    spriteID: 2d9c314310056d5449ebcd91380cf1b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 83}
+  - name: preview-raptor-pounce-attack_Frame_7
+    originalName: 
+    pivot: {x: -0.038461447, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 50
+      width: 52
+      height: 21
+    spriteID: 4394cbf75c06b144d87ad341a811392c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 50}
+  - name: preview-raptor-pounce-attack_Frame_8
+    originalName: 
+    pivot: {x: -0.038461447, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 50
+      width: 52
+      height: 21
+    spriteID: 092f7290d4ad6d04695978896aefd258
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 50}
+  - name: preview-raptor-pounce-attack_Frame_9
+    originalName: 
+    pivot: {x: -0.019230843, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 50
+      width: 52
+      height: 25
+    spriteID: e9da310b80b388f458acf3ec48aabc8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 50}
+  - name: preview-raptor-pounce-attack_Frame_10
+    originalName: 
+    pivot: {x: -0.019230843, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 50
+      width: 52
+      height: 25
+    spriteID: 6dd7fd3695151d84c9791a922acd1183
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 64, y: 50}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 289246407
+    name: preview-raptor-pounce-attack
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: preview-raptor-pounce-attack_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 36
+        y: 0
+        width: 57
+        height: 13
+      spriteId: 9d5751df888e11745a74ce85256bab70
+    - name: preview-raptor-pounce-attack_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 39
+        y: 0
+        width: 55
+        height: 13
+      spriteId: 4a09bfb771aa3404784c815128eb24f9
+    - name: preview-raptor-pounce-attack_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 51
+        y: 0
+        width: 44
+        height: 35
+      spriteId: 409dd54b9af67cd4bbd93c39fb1d4a68
+    - name: preview-raptor-pounce-attack_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 45
+        y: 2
+        width: 62
+        height: 38
+      spriteId: bc111077dc84e084fa03a9dfee68badf
+    - name: preview-raptor-pounce-attack_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 38
+        y: 5
+        width: 85
+        height: 38
+      spriteId: 0412f3c1354a20d4aa44eb50f020c47c
+    - name: preview-raptor-pounce-attack_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 107
+        y: 6
+        width: 32
+        height: 30
+      spriteId: 30d6d2b9ec306924fb24a419b552c1d9
+    - name: preview-raptor-pounce-attack_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 113
+        y: 2
+        width: 32
+        height: 30
+      spriteId: 2d9c314310056d5449ebcd91380cf1b8
+    - name: preview-raptor-pounce-attack_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 106
+        y: 0
+        width: 52
+        height: 21
+      spriteId: 4394cbf75c06b144d87ad341a811392c
+    - name: preview-raptor-pounce-attack_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 106
+        y: 0
+        width: 52
+        height: 21
+      spriteId: 092f7290d4ad6d04695978896aefd258
+    - name: preview-raptor-pounce-attack_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 105
+        y: 0
+        width: 52
+        height: 25
+      spriteId: e9da310b80b388f458acf3ec48aabc8c
+    - name: preview-raptor-pounce-attack_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 105
+        y: 0
+        width: 52
+        height: 25
+      spriteId: 6dd7fd3695151d84c9791a922acd1183
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 208, y: 64}
