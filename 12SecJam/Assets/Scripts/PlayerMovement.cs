@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float forceDamping;
 
     [SerializeField] FieldOfView fieldOfView;
+    [SerializeField] FieldOfView fieldOfView1;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,5 +56,7 @@ public class PlayerMovement : MonoBehaviour
         // Optionally, set the aim direction and origin for your field of view logic
         fieldOfView.SetAimDirection(aimDir);
         fieldOfView.SetOrigin(transform.position);
+        fieldOfView1.SetAimDirection(aimDir);
+        fieldOfView1.SetOrigin(transform.position);
     }
 }
