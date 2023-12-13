@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditorInternal;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canRun = true;
     public Vector2 forceToApply;
     public float forceDamping;
+    [SerializeField] private Image staminaSlider;
 
     [SerializeField] FieldOfView fieldOfView;
     [SerializeField] FieldOfView fieldOfView1;
@@ -51,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
                 stamina = maxStamina;
             speed = 3f;
         }
+        staminaSlider.fillAmount = stamina / maxStamina;
         PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized * speed;
         
         Aim();
