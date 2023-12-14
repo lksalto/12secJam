@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && stamina > 0f && canRun)
+        if (Input.GetKey(KeyCode.LeftShift) && stamina > 0f && canRun && rb.velocity.magnitude > 0.1f)
         {
             isRunning = true;
             speed = 4.5f;
