@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image interactionImage;
 
     [SerializeField] private GameObject interactionZoom;
-
+    [SerializeField] private Animator lightSourceAnim;
+    // [SerializeField] private Animator staminaImageAnim;
+    [SerializeField] private Animator staminaContainerAnim;
     private Interaction interactionScript;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.L)) // When Boss Spawns
+            FlickerLight();
         
+        if((Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.E))) && interactionScript.isImageOpen)
+        {
+            CloseInteractImage();
+        }
     }
 
     public void NextScene()
@@ -69,5 +77,14 @@ public class GameManager : MonoBehaviour
         interactionImage.GetComponent<Animator>().SetBool("isZoomingIn", false);
         Time.timeScale = 1f;
         StartCoroutine("ImageCooldown");
+    }
+    
+    // Makes light flicker for a brief second
+    public void FlickerLight()
+    {
+        // Play Weird Sound
+        lightSourceAnim.SetTrigger("isFlickering");
+        // staminaImageAnim.SetTrigger("isFlickering");
+        staminaContainerAnim.SetTrigger("isFlickering");
     }
 }

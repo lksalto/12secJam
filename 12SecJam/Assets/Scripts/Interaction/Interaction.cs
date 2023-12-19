@@ -23,9 +23,7 @@ public class Interaction : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {
-            if(isImageOpen && !canOpen && canClose)
-                gm.CloseInteractImage();
-            else if(canOpen)
+            if(canOpen && !isImageOpen)
                 gm.OpenInteractImage(interactionObject, this);
         }
     }

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Portix - 3075.unity
     guid: 5f0ec92fcfe87a1418fe94d602f5947f
+  - enabled: 1
+    path: Assets/Scenes/Portix - 1800.unity
+    guid: e978ebf8a2138804f9f0462c3c0f9745
   m_configObjects: {}

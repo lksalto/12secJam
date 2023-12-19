@@ -19,8 +19,6 @@ public class PlayerMovement : MonoBehaviour
     public float forceDamping;
     [SerializeField] private Image staminaSlider;
     private bool isTransitioning;
-    [SerializeField] FieldOfView fieldOfView;
-    [SerializeField] FieldOfView fieldOfView1;
     Vector2 PlayerInput;
     [SerializeField] Transform lightSource;
     
@@ -135,4 +133,6 @@ public class PlayerMovement : MonoBehaviour
         // fieldOfView1.SetAimDirection(aimDir);
         // fieldOfView1.SetOrigin(transform.position);
     }
+    
+    
 }
