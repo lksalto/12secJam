@@ -18,15 +18,17 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 forceToApply;
     public float forceDamping;
     [SerializeField] private Image staminaSlider;
-
-    [SerializeField] FieldOfView fieldOfView;
-    [SerializeField] FieldOfView fieldOfView1;
+    private bool isTransitioning;
     Vector2 PlayerInput;
+    [SerializeField] Transform lightSource;
+    
+    [SerializeField] Animator playerAnim;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         stamina = maxStamina;
+        playerAnim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -37,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
             isRunning = true;
             speed = 4.5f;
             stamina -= Time.deltaTime * staminaDecaySpeed;
+            playerAnim.speed = 2f;
             if (stamina <= 0f)
                 StartCoroutine(OutOfBreath());
         }
@@ -52,9 +55,11 @@ public class PlayerMovement : MonoBehaviour
             else
                 stamina = maxStamina;
             speed = 3f;
+            playerAnim.speed = 1f;
         }
         staminaSlider.fillAmount = stamina / maxStamina;
-        PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized * speed;
+        if(!isTransitioning)
+            PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         
         Aim();
     }
@@ -64,8 +69,10 @@ public class PlayerMovement : MonoBehaviour
         canRun = false;
         outOfBreath = true;
         speed = 1f;
+        playerAnim.speed = 0.5f;
         yield return new WaitForSeconds(1f);
         speed = 3f;
+        playerAnim.speed = 1f;
         outOfBreath = false;
     }
 
@@ -77,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
     void Move()
     {
         
-        Vector2 moveForce = PlayerInput;
+        Vector2 moveForce = PlayerInput * speed;
         moveForce += forceToApply;
         forceToApply /= forceDamping;
         if(Mathf.Abs(forceToApply.x) <= 0.01f && Mathf.Abs(forceToApply.y) <= 0.01f)
@@ -85,6 +92,25 @@ public class PlayerMovement : MonoBehaviour
             forceToApply = Vector2.zero;
         }
         rb.velocity = moveForce;
+        if (PlayerInput.x != 0 || PlayerInput.y != 0)
+        {
+            playerAnim.SetFloat("horizontal", PlayerInput.x);
+            playerAnim.SetFloat("vertical", PlayerInput.y);
+        }
+
+        if (rb.velocity.magnitude > 0.1f)
+            playerAnim.SetBool("isMoving", true);
+        else
+            playerAnim.SetBool("isMoving", false);
+    }
+
+    public void Stop()
+    {
+        isTransitioning = true;
+        PlayerInput = Vector2.zero;
+        rb.velocity = Vector2.zero;
+        playerAnim.SetBool("isMoving", false);
+        this.enabled = false;
     }
     void Aim()
     {
@@ -92,19 +118,21 @@ public class PlayerMovement : MonoBehaviour
         Vector3 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         // Calculate the direction vector from the object to the mouse position
-        Vector3 aimDir = (targetPosition - transform.position).normalized;
+        Vector3 aimDir = (targetPosition - lightSource.position).normalized;
 
         // Calculate the rotation to face the mouse position
         float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
         Quaternion lookRotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         // Apply the rotation to the object
-        transform.rotation = lookRotation;
+        lightSource.rotation = lookRotation;
 
         // Optionally, set the aim direction and origin for your field of view logic
-        fieldOfView.SetAimDirection(aimDir);
-        fieldOfView.SetOrigin(transform.position);
-        fieldOfView1.SetAimDirection(aimDir);
-        fieldOfView1.SetOrigin(transform.position);
+        // fieldOfView.SetAimDirection(aimDir);
+        // fieldOfView.SetOrigin(transform.position);
+        // fieldOfView1.SetAimDirection(aimDir);
+        // fieldOfView1.SetOrigin(transform.position);
     }
+    
+    
 }
