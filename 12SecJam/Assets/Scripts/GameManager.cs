@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
@@ -86,5 +87,13 @@ public class GameManager : MonoBehaviour
         lightSourceAnim.SetTrigger("isFlickering");
         // staminaImageAnim.SetTrigger("isFlickering");
         staminaContainerAnim.SetTrigger("isFlickering");
+
+        
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 }
