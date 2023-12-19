@@ -39,7 +39,7 @@ public class EnemyAI : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponentInChildren<SpriteRenderer>();
-        InvokeRepeating("UpdatePath", 0f, 0.3f);
+        InvokeRepeating("UpdatePath", 0f, 0.1f);
         state = SeekerState.ZANZANDO;
         waypoints = new List<GameObject>();
         for (int i = 0; i < wpPath.transform.childCount - 1; i++)
@@ -158,13 +158,12 @@ public class EnemyAI : MonoBehaviour
                     target = hit.collider.gameObject.transform;
                     StartCoroutine(ChaseCD(followTime));
                 }
-
-                // Draw the ray in Gizmos
+                //Acertou
                 Debug.DrawRay(transform.position, direction * hit.distance, Color.red);
             }
             else
             {
-                // Draw the ray in Gizmos (if no hit)
+                //Não acertou
                 Debug.DrawRay(transform.position, direction * rayLength, Color.green);
             }
         }

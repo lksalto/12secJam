@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerLife : MonoBehaviour
 {
     [SerializeField] int life = 1;
-    
+    [SerializeField] GameObject endScreen;
     public void TakeDmg(int x)
     {
         life -= x;
@@ -18,6 +18,7 @@ public class PlayerLife : MonoBehaviour
 
     public void Die()
     {
-
+        GetComponent<PlayerMovement>().enabled = false;
+        endScreen.SetActive(true);
     }
 }
