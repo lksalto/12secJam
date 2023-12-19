@@ -11,13 +11,13 @@ public class EnemyAI : MonoBehaviour
     public float rayLength = 5f;
     float raySpreadAngle = 360f;
 
-
     [SerializeField] GameObject wpPath;
     List<GameObject> waypoints;
     int waypointIndex = 0;
     public Transform target;
     public float speed = 200f;
     public float followTime = 5f;
+    float startFollowTime;
     public float nextWaypointDistance = 3f;
     bool reachedEndOfPath = false;
 
@@ -32,17 +32,18 @@ public class EnemyAI : MonoBehaviour
         ZANZANDO = 0,
         SEGUINDO = 1
     };
-    SeekerState state;
+    [SerializeField] SeekerState state;
 
     void Start()
     {
+        startFollowTime = followTime;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponentInChildren<SpriteRenderer>();
-        InvokeRepeating("UpdatePath", 0f, 0.1f);
+        InvokeRepeating("UpdatePath", 0f, 0.3f);
         state = SeekerState.ZANZANDO;
         waypoints = new List<GameObject>();
-        for (int i = 0; i < wpPath.transform.childCount - 1; i++)
+        for (int i = 0; i < wpPath.transform.childCount; i++)
         {
             waypoints.Add(wpPath.transform.GetChild(i).gameObject);
         }
@@ -123,15 +124,20 @@ public class EnemyAI : MonoBehaviour
        
         if(Vector2.Distance(target.transform.position, transform.position) < 0.3f)
         {
-            if (waypointIndex == waypoints.Count - 1 )
+            
+            
+            if (waypointIndex >= waypoints.Count-1)
             {
                 waypointIndex = 0;
+
             }
             else
             {
                 waypointIndex++;
             }
             target = waypoints[waypointIndex].transform;
+
+
         }
         else
         {
@@ -156,7 +162,16 @@ public class EnemyAI : MonoBehaviour
                 {
                     state = SeekerState.SEGUINDO;
                     target = hit.collider.gameObject.transform;
-                    StartCoroutine(ChaseCD(followTime));
+                    followTime = startFollowTime;
+                }
+                else
+                {
+                    followTime -= Time.deltaTime/rayCount;
+                    if (followTime < 0 && state == SeekerState.SEGUINDO)
+                    {
+                        state = SeekerState.ZANZANDO;
+                        target = waypoints[Random.Range(0, waypoints.Count-1)].transform;
+                    }
                 }
                 //Acertou
                 Debug.DrawRay(transform.position, direction * hit.distance, Color.red);
@@ -164,7 +179,9 @@ public class EnemyAI : MonoBehaviour
             else
             {
                 //Não acertou
+
                 Debug.DrawRay(transform.position, direction * rayLength, Color.green);
+                
             }
         }
     }
@@ -173,11 +190,5 @@ public class EnemyAI : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawSphere(transform.position, 0.1f);
     }
-    IEnumerator ChaseCD(float sec)
-    {
 
-        yield return new WaitForSeconds(sec);
-        state = SeekerState.ZANZANDO;
-        target = waypoints[0].transform;
-    }
 }

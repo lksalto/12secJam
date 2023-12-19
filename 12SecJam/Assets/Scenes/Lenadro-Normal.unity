@@ -789,7 +789,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434824208}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.6542997, y: -0.0062599927, z: 0}
+  m_LocalPosition: {x: -5.659834, y: -0.006249994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1084,7 +1084,7 @@ GameObject:
   - component: {fileID: 479953313}
   - component: {fileID: 479953312}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1154,7 +1154,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 479953313}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1354264757}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ReloadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &479953313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1361,7 +1373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7957001, y: -0.20374, z: -10}
+  m_LocalPosition: {x: -1.7901659, y: -0.20375, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2122,7 +2134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942864146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.53, y: 2.21, z: 0}
+  m_LocalPosition: {x: 9.98, y: 2.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2851,6 +2863,50 @@ MonoBehaviour:
   - {x: 2.401664, y: 0.0018014238, z: 0}
   - {x: 2.236525, y: 0.24950954, z: 0}
   - {x: 1.9558076, y: 0.48252052, z: 0}
+--- !u!1 &1354264756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1354264758}
+  - component: {fileID: 1354264757}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1354264757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354264756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7dce14bae0c984eb56886c87438ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1354264758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354264756}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1358129268
 GameObject:
   m_ObjectHideFlags: 0
@@ -4182,7 +4238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875263064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.53, y: -2.79, z: 0}
+  m_LocalPosition: {x: 8.68, y: -4.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4688,7 +4744,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 210713011402769242, guid: 615b649f8eca5b2438f41be35619ec4d, type: 3}
       propertyPath: speed
-      value: 4
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 210713011402769242, guid: 615b649f8eca5b2438f41be35619ec4d, type: 3}
       propertyPath: target
@@ -4698,6 +4754,10 @@ PrefabInstance:
       propertyPath: wpPath
       value: 
       objectReference: {fileID: 1785984260}
+    - target: {fileID: 210713011402769242, guid: 615b649f8eca5b2438f41be35619ec4d, type: 3}
+      propertyPath: rayCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 210713011402769242, guid: 615b649f8eca5b2438f41be35619ec4d, type: 3}
       propertyPath: targetLayers.m_Bits
       value: 72
@@ -4732,7 +4792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6796536416292794123, guid: 615b649f8eca5b2438f41be35619ec4d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.87
+      value: 2.23
       objectReference: {fileID: 0}
     - target: {fileID: 6796536416292794123, guid: 615b649f8eca5b2438f41be35619ec4d, type: 3}
       propertyPath: m_LocalPosition.y
