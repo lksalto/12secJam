@@ -4190,6 +4190,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1785984260}
     - target: {fileID: 210713011402769242, guid: 615b649f8eca5b2438f41be35619ec4d, type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 210713011402769242, guid: 615b649f8eca5b2438f41be35619ec4d, type: 3}
       propertyPath: waypoints.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -4219,7 +4223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6796536416292794123, guid: 615b649f8eca5b2438f41be35619ec4d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6500001
+      value: -6.87
       objectReference: {fileID: 0}
     - target: {fileID: 6796536416292794123, guid: 615b649f8eca5b2438f41be35619ec4d, type: 3}
       propertyPath: m_LocalPosition.y

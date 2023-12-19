@@ -6,11 +6,18 @@ using UnityEngine.UIElements;
 
 public class EnemyAI : MonoBehaviour
 {
+    public LayerMask targetLayers;
+    public int rayCount = 20;
+    public float rayLength = 5f;
+    float raySpreadAngle = 360f;
+
+
     [SerializeField] GameObject wpPath;
     List<GameObject> waypoints;
     int waypointIndex = 0;
     public Transform target;
     public float speed = 200f;
+    public float followTime = 5f;
     public float nextWaypointDistance = 3f;
     bool reachedEndOfPath = false;
 
@@ -37,14 +44,14 @@ public class EnemyAI : MonoBehaviour
         waypoints = new List<GameObject>();
         for (int i = 0; i < wpPath.transform.childCount - 1; i++)
         {
-            Debug.Log(wpPath.transform.GetChild(i).name);
             waypoints.Add(wpPath.transform.GetChild(i).gameObject);
         }
         target = waypoints[0].transform;
     }
     private void Update()
     {
-        if(target != null) 
+        CastRaycasts();
+        if (target != null) 
         {
             sr.flipX = target.transform.position.x < transform.position.x;
         }
@@ -55,7 +62,7 @@ public class EnemyAI : MonoBehaviour
     {
         if(state == SeekerState.SEGUINDO)
         {
-            FollowPlayer();
+            GoToTarget();
         }
         else
         {
@@ -83,7 +90,7 @@ public class EnemyAI : MonoBehaviour
         
     }
 
-    void FollowPlayer()
+    void GoToTarget()
     {
         if (path == null)
         {
@@ -128,13 +135,50 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            FollowPlayer();
+            GoToTarget();
         }
     }
 
-    public void MoveToTarget()
+    void CastRaycasts()
+    {
+        float angleStep = raySpreadAngle / rayCount;
+
+        for (int i = 0; i < rayCount; i++)
+        {
+            float angle = i * angleStep;
+            Vector2 direction = Quaternion.Euler(0, 0, angle) * transform.right;
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, rayLength, targetLayers);
+
+            if (hit.collider != null)
+            {
+                if(hit.collider.gameObject.CompareTag("Player"))
+                {
+                    state = SeekerState.SEGUINDO;
+                    target = hit.collider.gameObject.transform;
+                    StartCoroutine(ChaseCD(followTime));
+                }
+
+                // Draw the ray in Gizmos
+                Debug.DrawRay(transform.position, direction * hit.distance, Color.red);
+            }
+            else
+            {
+                // Draw the ray in Gizmos (if no hit)
+                Debug.DrawRay(transform.position, direction * rayLength, Color.green);
+            }
+        }
+    }
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawSphere(transform.position, 0.1f);
+    }
+    IEnumerator ChaseCD(float sec)
     {
 
+        yield return new WaitForSeconds(sec);
+        state = SeekerState.ZANZANDO;
+        target = waypoints[0].transform;
     }
-
 }
