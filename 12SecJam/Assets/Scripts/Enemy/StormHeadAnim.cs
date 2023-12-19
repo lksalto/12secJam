@@ -6,9 +6,13 @@ public class StormHeadAnim : MonoBehaviour
 {
 
     [SerializeField] Animator anim;
+    [SerializeField] float atkCD = 3f;
+    [SerializeField] float detectionRadius;
+    [SerializeField] LayerMask playerLayer;
+    [SerializeField] int dmg = 1;
     void Start()
     {
-        
+        InvokeRepeating("Attack", 0, atkCD);
     }
 
     // Update is called once per frame
@@ -16,7 +20,12 @@ public class StormHeadAnim : MonoBehaviour
     {
         
     }
-
+    private void OnDrawGizmosSelected()
+    {
+        
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, detectionRadius);
+    }
     public void Attack()
     {
         anim.SetTrigger("attack");
@@ -24,6 +33,14 @@ public class StormHeadAnim : MonoBehaviour
     
     public void Damage()
     {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius, playerLayer);
 
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Player"))
+            {
+                collider.transform.gameObject.GetComponent<PlayerLife>().TakeDmg(dmg);
+            }
+        }
     }
 }
