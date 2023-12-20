@@ -1,32 +1,26 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Interaction : MonoBehaviour
+public class TorchPickup : MonoBehaviour
 {
-    [SerializeField] GameObject interactionImage;
-    [SerializeField] Sprite interactionObject;
     private bool canInteract;
-    public bool isImageOpen;
-    public bool canOpen = true;
-    public bool canClose = false;
-    private GameManager gm;
-    
-    private void Start()
-    {
-        gm = FindObjectOfType<GameManager>();
-    }
-
+    private Animator playerAnim;
+    [SerializeField] GameObject interactionImage;
+    [SerializeField] AnimatorController playerAnimController;
+    [SerializeField] private GameObject torch;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {
-            if(isImageOpen && !canOpen && canClose)
-                gm.CloseInteractImage();
-            else if(canOpen && !isImageOpen)
-                gm.OpenInteractImage(interactionObject, this);
+            //Change player sprite
+            //Destroy torch
+            playerAnim.runtimeAnimatorController = playerAnimController;
+            torch.SetActive(true);
+            Destroy(this.gameObject);
         }
     }
 
@@ -35,6 +29,7 @@ public class Interaction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             interactionImage.SetActive(true);
+            playerAnim = other.GetComponent<Animator>();
             canInteract = true;
         }
     }

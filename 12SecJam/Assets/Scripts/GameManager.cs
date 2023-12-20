@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     // [SerializeField] private Animator staminaImageAnim;
     [SerializeField] private Animator staminaContainerAnim;
     private Interaction interactionScript;
+
+    [SerializeField] private Image startLevelImage;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +28,13 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.L)) // When Boss Spawns
             FlickerLight();
         
-        if((Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.E))) && interactionScript.isImageOpen)
-        {
-            CloseInteractImage();
-        }
+        // if((Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.E))) && interactionScript.isImageOpen)
+        // {
+        //     CloseInteractImage();
+        // }
     }
 
+    
     public void NextScene()
     {
         //Transition

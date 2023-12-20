@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: fa40a5eead943564a9d5c00af44703d5
   - enabled: 1
-    path: Assets/Scenes/Normal - Portix.unity
+    path: Assets/Scenes/ForaLabirinto.unity
+    guid: a29d6796e087e6649a083daddc71249b
+  - enabled: 1
+    path: Assets/Scenes/Normal.unity
     guid: 8ab7abf8cbe168d43a578f369b0610ef
   - enabled: 1
-    path: Assets/Scenes/Portix - 3075.unity
+    path: Assets/Scenes/3075.unity
     guid: 5f0ec92fcfe87a1418fe94d602f5947f
   - enabled: 1
-    path: Assets/Scenes/Portix - 1800.unity
+    path: Assets/Scenes/1800.unity
     guid: e978ebf8a2138804f9f0462c3c0f9745
   m_configObjects: {}
