@@ -8,6 +8,7 @@ TagManager:
   - Image
   - ZoomImage
   - Interaction
+  - Subtitles
   layers:
   - Default
   - TransparentFX

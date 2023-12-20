@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,12 +17,36 @@ public class GameManager : MonoBehaviour
     private Interaction interactionScript;
 
     [SerializeField] private Image startLevelImage;
+    
+    [Header("Subtitles")]
+    [SerializeField] private GameObject initialSubtitleObject;
+    [SerializeField] private float subtitleTime = 10f;
+
+    [SerializeField] private AudioSource playerAudioSource;
     // Start is called before the first frame update
     void Start()
     {
-        // DontDestroyOnLoad(this.gameObject);
     }
 
+    public void PlayCLipAtPlayer(AudioClip audioClip)
+    {
+        playerAudioSource.clip = audioClip;
+        playerAudioSource.Play();
+    }
+    public void DestroySubtitle(string subtitle, float audioLength, AudioClip audioClip)
+    {
+        PlayCLipAtPlayer(audioClip);
+        subtitleTime = audioLength + 1;
+        initialSubtitleObject.SetActive(true);
+        initialSubtitleObject.GetComponentInChildren<TextMeshProUGUI>().text = subtitle;
+        StartCoroutine("DisableSubtitle");
+    }
+
+    public IEnumerator DisableSubtitle()
+    {
+        yield return new WaitForSeconds(subtitleTime);
+        initialSubtitleObject.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {

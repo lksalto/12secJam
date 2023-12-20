@@ -4,35 +4,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Interaction : MonoBehaviour
+public class BackPackInteraction : Interaction
 {
-    [SerializeField] protected GameObject interactionImage;
-    [SerializeField] protected Sprite interactionObject;
-    public bool canInteract;
-    public bool isImageOpen;
-    public bool canOpen = true;
-    public bool canClose = false;
-    protected GameManager gm;
-    
-    private void Start()
-    {
-        gm = FindObjectOfType<GameManager>();
-    }
-
+    private bool opened;
+    [SerializeField] AudioClip audioClip;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {
-            if(isImageOpen && !canOpen && canClose)
+            if (isImageOpen && !canOpen && canClose)
+            {
                 gm.CloseInteractImage();
-            else if(canOpen && !isImageOpen)
+                opened = true;
+            }
+            else if (canOpen && !isImageOpen)
+            {
                 gm.OpenInteractImage(interactionObject, this);
+                gm.PlayCLipAtPlayer(audioClip);
+                canInteract = false;
+                interactionImage.SetActive(false);
+            }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !opened)
         {
             interactionImage.SetActive(true);
             canInteract = true;
