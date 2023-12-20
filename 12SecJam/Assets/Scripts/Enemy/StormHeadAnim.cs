@@ -39,7 +39,7 @@ public class StormHeadAnim : MonoBehaviour
         {
             if (collider.CompareTag("Player"))
             {
-                collider.transform.gameObject.GetComponent<PlayerLife>().TakeDmg(dmg);
+                collider.transform.gameObject.GetComponentInParent<PlayerLife>().TakeDmg(dmg);
             }
         }
     }

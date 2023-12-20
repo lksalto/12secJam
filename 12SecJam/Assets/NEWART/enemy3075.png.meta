@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bd167ef06b5eea644926df36e257e511
+guid: 685c157f106df554fb6827a0e6c55310
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -107,7 +107,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -120,7 +120,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -136,34 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_0"
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 1424
-        width: 93
-        height: 90
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb432ac1aa4661a4ab7eba5e5ebf1bbf
-      internalID: 871885578
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_1"
+      name: enemy3075_2
       rect:
         serializedVersion: 2
         x: 56
-        y: 1228
-        width: 93
-        height: 91
+        y: 280
+        width: 22
+        height: 22
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,41 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6365231cc4410ba4abd513c4a855b83c
-      internalID: 1245798586
+      spriteID: f356030b6d364a24d8b170ed24c9de7f
+      internalID: -1918455170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_2"
-      rect:
-        serializedVersion: 2
-        x: 58
-        y: 1032
-        width: 91
-        height: 91
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df3f3c37b4316e24e860aaf7074f5037
-      internalID: 1982704740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_3"
+      name: enemy3075_5
       rect:
         serializedVersion: 2
         x: 56
-        y: 836
-        width: 97
-        height: 90
+        y: 244
+        width: 22
+        height: 24
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a930f0c65a8823a438302b56b934a664
-      internalID: -1376299533
+      spriteID: 395e0bdccbaeaf643bfa64731eea917a
+      internalID: -1277277907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_4"
+      name: enemy3075_8
       rect:
         serializedVersion: 2
         x: 53
-        y: 640
-        width: 98
-        height: 90
+        y: 207
+        width: 26
+        height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,41 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baf355e83db0edc428006d184ef8764e
-      internalID: 894016018
+      spriteID: 444fe911986dd464db05141a3831f5bc
+      internalID: -780615913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_5"
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 444
-        width: 95
-        height: 90
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 082036a2ab366034aa0325e16cb4b02e
-      internalID: -557239362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_6"
+      name: enemy3075_11
       rect:
         serializedVersion: 2
         x: 53
-        y: 248
-        width: 92
-        height: 90
+        y: 167
+        width: 25
+        height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4834928abc2b354480b95cb21d2ac8f
-      internalID: 944653566
+      spriteID: d5005eb308b31b34da0170a2d4dbb2a3
+      internalID: -1310583323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_7"
+      name: enemy3075_14
       rect:
         serializedVersion: 2
-        x: 53
-        y: 52
-        width: 92
-        height: 90
+        x: 54
+        y: 124
+        width: 20
+        height: 22
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,8 +234,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2377a87e2b29a664190823042036837a
-      internalID: 1171343927
+      spriteID: 2254b50a6f9abb740afcdb8025fff612
+      internalID: 1331128606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy3075_17
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 88
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48dfedbcb0f65234695f0d189189916a
+      internalID: -882144520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy3075_20
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 51
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb973192351a52a48919175f3726f56c
+      internalID: -421477060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy3075_23
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 11
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70c3c8e3910a004dbfa4bb96cb3d8cb
+      internalID: -407782453
       vertices: []
       indices: 
       edges: []
@@ -314,14 +314,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "ZumbiAndando - N\xEDvel 0_0": 871885578
-      "ZumbiAndando - N\xEDvel 0_1": 1245798586
-      "ZumbiAndando - N\xEDvel 0_2": 1982704740
-      "ZumbiAndando - N\xEDvel 0_3": -1376299533
-      "ZumbiAndando - N\xEDvel 0_4": 894016018
-      "ZumbiAndando - N\xEDvel 0_5": -557239362
-      "ZumbiAndando - N\xEDvel 0_6": 944653566
-      "ZumbiAndando - N\xEDvel 0_7": 1171343927
+      enemy3075_0: -26674499
+      enemy3075_1: 1597046527
+      enemy3075_10: -894000255
+      enemy3075_11: -1310583323
+      enemy3075_12: -1190626606
+      enemy3075_13: -1264712699
+      enemy3075_14: 1331128606
+      enemy3075_15: -824652730
+      enemy3075_16: 631073836
+      enemy3075_17: -882144520
+      enemy3075_18: -150785338
+      enemy3075_19: 1913034798
+      enemy3075_2: -1918455170
+      enemy3075_20: -421477060
+      enemy3075_21: 260599223
+      enemy3075_22: 493584823
+      enemy3075_23: -407782453
+      enemy3075_3: -809794108
+      enemy3075_4: -882418653
+      enemy3075_5: -1277277907
+      enemy3075_6: -2069915119
+      enemy3075_7: 1379423355
+      enemy3075_8: -780615913
+      enemy3075_9: 316066787
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

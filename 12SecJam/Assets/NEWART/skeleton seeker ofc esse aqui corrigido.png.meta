@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bd167ef06b5eea644926df36e257e511
+guid: 0b12929cf3a89ff48b9c3de1812f1b01
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,7 +107,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -120,7 +120,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_0"
+      name: skeleton seeker ofc esse aqui corrigido_0
       rect:
         serializedVersion: 2
-        x: 51
-        y: 1424
-        width: 93
-        height: 90
+        x: 21
+        y: 614
+        width: 92
+        height: 83
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb432ac1aa4661a4ab7eba5e5ebf1bbf
-      internalID: 871885578
+      spriteID: fee0e6aafbc01bd43a15001b32bbb3f7
+      internalID: -1913803744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_1"
+      name: skeleton seeker ofc esse aqui corrigido_1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 1228
-        width: 93
-        height: 91
+        x: 32
+        y: 494
+        width: 62
+        height: 85
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6365231cc4410ba4abd513c4a855b83c
-      internalID: 1245798586
+      spriteID: 01f8ec57cc920df4e8a89763ae9d5dee
+      internalID: -183367536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_2"
+      name: skeleton seeker ofc esse aqui corrigido_2
       rect:
         serializedVersion: 2
-        x: 58
-        y: 1032
+        x: 36
+        y: 374
+        width: 50
+        height: 84
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4511c22d59b0a804f8c6a0ac1d38d72c
+      internalID: -1399163461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton seeker ofc esse aqui corrigido_3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 255
+        width: 50
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8032d64e0f75a84e8b298974d555a90
+      internalID: -2122527121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton seeker ofc esse aqui corrigido_4
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 134
+        width: 66
+        height: 84
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a388ea6841144b4a9be3e279c3961f9
+      internalID: 969549915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton seeker ofc esse aqui corrigido_5
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 14
         width: 91
-        height: 91
+        height: 83
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,113 +255,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df3f3c37b4316e24e860aaf7074f5037
-      internalID: 1982704740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_3"
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 836
-        width: 97
-        height: 90
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a930f0c65a8823a438302b56b934a664
-      internalID: -1376299533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_4"
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 640
-        width: 98
-        height: 90
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: baf355e83db0edc428006d184ef8764e
-      internalID: 894016018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_5"
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 444
-        width: 95
-        height: 90
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 082036a2ab366034aa0325e16cb4b02e
-      internalID: -557239362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_6"
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 248
-        width: 92
-        height: 90
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4834928abc2b354480b95cb21d2ac8f
-      internalID: 944653566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_7"
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 52
-        width: 92
-        height: 90
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2377a87e2b29a664190823042036837a
-      internalID: 1171343927
+      spriteID: df4f8511e9f9dec42bd995798bfb726a
+      internalID: -2061114835
       vertices: []
       indices: 
       edges: []
@@ -314,14 +272,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "ZumbiAndando - N\xEDvel 0_0": 871885578
-      "ZumbiAndando - N\xEDvel 0_1": 1245798586
-      "ZumbiAndando - N\xEDvel 0_2": 1982704740
-      "ZumbiAndando - N\xEDvel 0_3": -1376299533
-      "ZumbiAndando - N\xEDvel 0_4": 894016018
-      "ZumbiAndando - N\xEDvel 0_5": -557239362
-      "ZumbiAndando - N\xEDvel 0_6": 944653566
-      "ZumbiAndando - N\xEDvel 0_7": 1171343927
+      skeleton seeker ofc esse aqui corrigido_0: -1913803744
+      skeleton seeker ofc esse aqui corrigido_1: -183367536
+      skeleton seeker ofc esse aqui corrigido_2: -1399163461
+      skeleton seeker ofc esse aqui corrigido_3: -2122527121
+      skeleton seeker ofc esse aqui corrigido_4: 969549915
+      skeleton seeker ofc esse aqui corrigido_5: -2061114835
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

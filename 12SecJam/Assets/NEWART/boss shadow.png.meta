@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bd167ef06b5eea644926df36e257e511
+guid: 1b9206da8acfde8489d131d86925bd55
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -107,7 +107,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -120,7 +120,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_0"
+      name: boss shadow_0
       rect:
         serializedVersion: 2
-        x: 51
-        y: 1424
-        width: 93
-        height: 90
+        x: 3
+        y: 24
+        width: 170
+        height: 120
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb432ac1aa4661a4ab7eba5e5ebf1bbf
-      internalID: 871885578
+      spriteID: 8fa446d611058f04b930fe98ef8f0caf
+      internalID: -1515359512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_1"
+      name: boss shadow_1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 1228
-        width: 93
-        height: 91
+        x: 180
+        y: 16
+        width: 177
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6365231cc4410ba4abd513c4a855b83c
-      internalID: 1245798586
+      spriteID: 00bb810ce6ada394fbe8cc13592c0ec2
+      internalID: -787004928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_2"
+      name: boss shadow_2
       rect:
         serializedVersion: 2
-        x: 58
-        y: 1032
-        width: 91
-        height: 91
+        x: 362
+        y: 16
+        width: 177
+        height: 130
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df3f3c37b4316e24e860aaf7074f5037
-      internalID: 1982704740
+      spriteID: 2e07030cbb245bc4aae28ed500babb7c
+      internalID: 474370107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_3"
+      name: boss shadow_3
       rect:
         serializedVersion: 2
-        x: 56
-        y: 836
-        width: 97
-        height: 90
+        x: 543
+        y: 24
+        width: 170
+        height: 120
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a930f0c65a8823a438302b56b934a664
-      internalID: -1376299533
+      spriteID: 0fcafbc759ab95f4b883628900d1cb4c
+      internalID: -283372446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_4"
+      name: boss shadow_4
       rect:
         serializedVersion: 2
-        x: 53
-        y: 640
-        width: 98
-        height: 90
+        x: 724
+        y: 20
+        width: 170
+        height: 124
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baf355e83db0edc428006d184ef8764e
-      internalID: 894016018
+      spriteID: bc60574e96bf4a24bbd815754718c269
+      internalID: -493217243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_5"
+      name: boss shadow_5
       rect:
         serializedVersion: 2
-        x: 52
-        y: 444
-        width: 95
-        height: 90
+        x: 903
+        y: 24
+        width: 170
+        height: 120
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 082036a2ab366034aa0325e16cb4b02e
-      internalID: -557239362
+      spriteID: 22ecdb5c8c5ddd24690df1c6645509b3
+      internalID: 686272746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_6"
+      name: boss shadow_6
       rect:
         serializedVersion: 2
-        x: 53
-        y: 248
-        width: 92
-        height: 90
+        x: 1080
+        y: 16
+        width: 177
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,29 +276,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4834928abc2b354480b95cb21d2ac8f
-      internalID: 944653566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "ZumbiAndando - N\xEDvel 0_7"
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 52
-        width: 92
-        height: 90
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2377a87e2b29a664190823042036837a
-      internalID: 1171343927
+      spriteID: 743c594fa12bdf544930652e13e3ca9d
+      internalID: -744003596
       vertices: []
       indices: 
       edges: []
@@ -314,14 +293,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "ZumbiAndando - N\xEDvel 0_0": 871885578
-      "ZumbiAndando - N\xEDvel 0_1": 1245798586
-      "ZumbiAndando - N\xEDvel 0_2": 1982704740
-      "ZumbiAndando - N\xEDvel 0_3": -1376299533
-      "ZumbiAndando - N\xEDvel 0_4": 894016018
-      "ZumbiAndando - N\xEDvel 0_5": -557239362
-      "ZumbiAndando - N\xEDvel 0_6": 944653566
-      "ZumbiAndando - N\xEDvel 0_7": 1171343927
+      boss shadow_0: -1515359512
+      boss shadow_1: -787004928
+      boss shadow_2: 474370107
+      boss shadow_3: -283372446
+      boss shadow_4: -493217243
+      boss shadow_5: 686272746
+      boss shadow_6: -744003596
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
