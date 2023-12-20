@@ -11,14 +11,13 @@ public class PlayerLife : MonoBehaviour
         life -= x;
         if(life <= 0)
         {
-            Debug.Log("MORREU");
             Die();
         }
     }
 
     public void Die()
     {
-        GetComponent<PlayerMovement>().enabled = false;
-        endScreen.SetActive(true);
+        //GetComponent<PlayerMovement>().enabled = false;
+        //endScreen.SetActive(true);
     }
 }

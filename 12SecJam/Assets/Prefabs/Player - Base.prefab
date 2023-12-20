@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4375772168352797252}
   - component: {fileID: 4082837361766307625}
   - component: {fileID: 1069547178823813781}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player_Visual
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7860541573851623086}
   - component: {fileID: 1270754090222533069}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Light 2D (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6980090759949523672}
   - component: {fileID: 4306223031436537804}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LightSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2466807516685455658}
   - component: {fileID: 1397973571919687489}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1471713217620538433}
   - component: {fileID: 8678745463259746195}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Light 2D (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,8 @@ GameObject:
   - component: {fileID: 8994460506267075212}
   - component: {fileID: 4406312331926143018}
   - component: {fileID: 5010099999549594088}
-  m_Layer: 0
+  - component: {fileID: 7008229280075745908}
+  m_Layer: 3
   m_Name: Player - Base
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -500,7 +501,7 @@ Transform:
   - {fileID: 6980090759949523672}
   - {fileID: 7860541573851623086}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4406312331926143018
 MonoBehaviour:
@@ -549,6 +550,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &7008229280075745908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5227218147555427496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78407f600f851fc408d4efc619fe60bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 1
+  endScreen: {fileID: 0}
 --- !u!1 &7095368473920686512
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466154874506620773}
   - component: {fileID: 1058602255846002245}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -648,7 +663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5048771443922867971}
   - component: {fileID: 5548148715226074479}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player_Visual (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -124,8 +124,6 @@ public class EnemyAI : MonoBehaviour
        
         if(Vector2.Distance(target.transform.position, transform.position) < 0.3f)
         {
-            
-            
             if (waypointIndex >= waypoints.Count-1)
             {
                 waypointIndex = 0;
