@@ -33,10 +33,10 @@ public class GameManager : MonoBehaviour
         playerAudioSource.clip = audioClip;
         playerAudioSource.Play();
     }
-    public void DestroySubtitle(string subtitle, float audioLength, AudioClip audioClip)
+    public void DestroySubtitle(string subtitle, AudioClip audioClip)
     {
         PlayCLipAtPlayer(audioClip);
-        subtitleTime = audioLength + 1;
+        subtitleTime = audioClip.length;
         initialSubtitleObject.SetActive(true);
         initialSubtitleObject.GetComponentInChildren<TextMeshProUGUI>().text = subtitle;
         StartCoroutine("DisableSubtitle");
@@ -45,6 +45,12 @@ public class GameManager : MonoBehaviour
     public IEnumerator DisableSubtitle()
     {
         yield return new WaitForSeconds(subtitleTime);
+        initialSubtitleObject.SetActive(false);
+    }
+    
+    public IEnumerator DisableSubtitleFast()
+    {
+        yield return new WaitForSeconds(2f);
         initialSubtitleObject.SetActive(false);
     }
     // Update is called once per frame
@@ -79,6 +85,7 @@ public class GameManager : MonoBehaviour
         interactionScript.canOpen = false;
         interactionZoom.SetActive(true);
         interactionImage.sprite = interactionObject;
+        interactionImage.SetNativeSize();
         this.interactionScript = interactionScript;
         StartCoroutine("ImageCooldown");
     }

@@ -8,6 +8,7 @@ public class BackPackInteraction : Interaction
 {
     private bool opened;
     [SerializeField] AudioClip audioClip;
+    [SerializeField] string subtitleText;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
@@ -16,13 +17,15 @@ public class BackPackInteraction : Interaction
             {
                 gm.CloseInteractImage();
                 opened = true;
+                canInteract = false;
+                interactionImage.SetActive(false);
+                gm.StartCoroutine("DestroySubtitleFast");
             }
             else if (canOpen && !isImageOpen)
             {
                 gm.OpenInteractImage(interactionObject, this);
+                gm.DestroySubtitle(subtitleText, audioClip);
                 gm.PlayCLipAtPlayer(audioClip);
-                canInteract = false;
-                interactionImage.SetActive(false);
             }
         }
     }

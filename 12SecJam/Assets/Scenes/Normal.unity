@@ -4144,7 +4144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1085698050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6011,7 +6011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1671156621
 Rigidbody2D:
   serializedVersion: 4
@@ -6978,9 +6978,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 890109556}
     - target: {fileID: 4541030061594744831, guid: 7f3777357c33ed84cb58068faf5e4b8b, type: 3}
+      propertyPath: playerAudioSource
+      value: 
+      objectReference: {fileID: 1226932704}
+    - target: {fileID: 4541030061594744831, guid: 7f3777357c33ed84cb58068faf5e4b8b, type: 3}
       propertyPath: staminaContainerAnim
       value: 
       objectReference: {fileID: 702724534}
+    - target: {fileID: 4541030061594744831, guid: 7f3777357c33ed84cb58068faf5e4b8b, type: 3}
+      propertyPath: initialSubtitleObject
+      value: 
+      objectReference: {fileID: 557554118}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7094,7 +7102,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4697610666013711227, guid: 55b6c0e4674232844837964376ac60d1, type: 3}
-      insertIndex: -1
+      insertIndex: 3
       addedObject: {fileID: 557554119}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55b6c0e4674232844837964376ac60d1, type: 3}
@@ -7191,7 +7199,9 @@ MonoBehaviour:
   isImageOpen: 0
   canOpen: 1
   canClose: 0
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: eaa1466588de017409cd86c1307e5918, type: 3}
+  subtitleText: "N\xE3o - n\xE3o pode ser! \xC9 a mochila da Helena! Filha, onde
+    voc\xEA est\xE1? Estou indo te salvar, minha querida!"
 --- !u!1 &5541567993450927938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5399829231136974290, guid: b6f667a37c99da14985eee2ab78d9b41, type: 3}

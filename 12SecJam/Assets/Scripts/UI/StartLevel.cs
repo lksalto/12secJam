@@ -14,7 +14,8 @@ public class StartLevel : MonoBehaviour
 
     public void PlayAudio()
     {
-        FindObjectOfType<GameManager>().DestroySubtitle(text, audioClip.length, audioClip);
+        if(audioClip != null)
+            FindObjectOfType<GameManager>().DestroySubtitle(text, audioClip);
     }
 
 }
