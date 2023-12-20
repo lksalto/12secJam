@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {
-    [SerializeField] GameObject interactionImage;
-    [SerializeField] Sprite interactionObject;
-    private bool canInteract;
+    [SerializeField] protected GameObject interactionImage;
+    [SerializeField] protected Sprite interactionObject;
+    public bool canInteract;
     public bool isImageOpen;
     public bool canOpen = true;
     public bool canClose = false;
-    private GameManager gm;
+    protected GameManager gm;
     
     private void Start()
     {
@@ -23,7 +23,9 @@ public class Interaction : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {
-            if(canOpen && !isImageOpen)
+            if(isImageOpen && !canOpen && canClose)
+                gm.CloseInteractImage();
+            else if(canOpen && !isImageOpen)
                 gm.OpenInteractImage(interactionObject, this);
         }
     }
