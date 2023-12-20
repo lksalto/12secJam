@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour
     public int rayCount = 20;
     public float rayLength = 5f;
     float raySpreadAngle = 360f;
-
+    Transform playerTransf;
     [SerializeField] GameObject wpPath;
     List<GameObject> waypoints;
     int waypointIndex = 0;
@@ -43,11 +43,18 @@ public class EnemyAI : MonoBehaviour
         InvokeRepeating("UpdatePath", 0f, 0.3f);
         state = SeekerState.ZANZANDO;
         waypoints = new List<GameObject>();
-        for (int i = 0; i < wpPath.transform.childCount; i++)
+        if (gameObject.CompareTag("Boss"))
         {
-            waypoints.Add(wpPath.transform.GetChild(i).gameObject);
+            playerTransf = FindObjectOfType<PlayerLife>().transform;
         }
-        target = waypoints[0].transform;
+        else
+        { 
+            for (int i = 0; i < wpPath.transform.childCount; i++)
+            {
+                waypoints.Add(wpPath.transform.GetChild(i).gameObject);
+            }
+            target = waypoints[0].transform;
+        }
     }
     private void Update()
     {
@@ -121,25 +128,33 @@ public class EnemyAI : MonoBehaviour
 
     public void Zanzar()
     {
-       
-        if(Vector2.Distance(target.transform.position, transform.position) < 0.3f)
+        if(gameObject.CompareTag("Boss"))
         {
-            if (waypointIndex >= waypoints.Count-1)
+            target = playerTransf;
+            state = SeekerState.SEGUINDO;
+        }
+        else
+        {
+
+            if(Vector2.Distance(target.transform.position, transform.position) < 0.3f)
             {
-                waypointIndex = 0;
+                if (waypointIndex >= waypoints.Count-1)
+                {
+                    waypointIndex = 0;
+
+                }
+                else
+                {
+                    waypointIndex++;
+                }
+                target = waypoints[waypointIndex].transform;
+
 
             }
             else
             {
-                waypointIndex++;
+                GoToTarget();
             }
-            target = waypoints[waypointIndex].transform;
-
-
-        }
-        else
-        {
-            GoToTarget();
         }
     }
 
@@ -188,5 +203,13 @@ public class EnemyAI : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawSphere(transform.position, 0.1f);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+        if (collision.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerLife>().TakeDmg(1);
 
+        }
+    }
 }

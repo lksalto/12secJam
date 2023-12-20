@@ -8,6 +8,7 @@ TagManager:
   - Image
   - ZoomImage
   - Interaction
+  - Boss
   layers:
   - Default
   - TransparentFX
