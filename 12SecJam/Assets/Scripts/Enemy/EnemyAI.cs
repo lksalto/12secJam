@@ -191,7 +191,7 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                //Não acertou
+                //Nï¿½o acertou
 
                 Debug.DrawRay(transform.position, direction * rayLength, Color.green);
                 
@@ -205,10 +205,9 @@ public class EnemyAI : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
         if (collision.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerLife>().Die(gameObject.CompareTag("Boss"));
+            collision.gameObject.GetComponentInParent<PlayerLife>().Die(gameObject.CompareTag("Boss"));
         }
     }
 }

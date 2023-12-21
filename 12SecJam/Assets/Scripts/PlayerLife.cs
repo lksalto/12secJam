@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerLife : MonoBehaviour
 {
     [SerializeField] int life = 1;
-    [SerializeField] GameObject endScreen;
-
+    [SerializeField] GameObject jumpscare;
 
     public void Die(bool boss)
     {
@@ -15,5 +14,17 @@ public class PlayerLife : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        else
+        {
+            StartCoroutine(Jumpscare(5f));
+        }
     }
+    IEnumerator Jumpscare(float s)
+    {
+        jumpscare.SetActive(true);
+        yield return new WaitForSeconds(s);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    
+    
 }
