@@ -7,7 +7,7 @@ public class PlayerLife : MonoBehaviour
 {
     [SerializeField] int life = 1;
     [SerializeField] GameObject endScreen;
-
+    [SerializeField] GameObject jumpscare;
 
     public void Die(bool boss)
     {
@@ -15,5 +15,16 @@ public class PlayerLife : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        else
+        {
+            StartCoroutine(Jumpscare(15f));
+        }
+    }
+    IEnumerator Jumpscare(float s)
+    {
+        jumpscare.gameObject.active = true;
+        yield return new WaitForSeconds(s);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 }
