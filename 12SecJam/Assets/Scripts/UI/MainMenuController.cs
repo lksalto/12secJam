@@ -36,10 +36,22 @@ public class MainMenuController : MonoBehaviour
         currentMenu.SetActive(true);
     }
 
+    public void CreditsMenu()
+    {
+        currentMenu.SetActive(false);
+        currentMenu = creditsMenu;
+        currentMenu.SetActive(true);
+    }
+    
     public void BackToMainMenu()
     {
         currentMenu.SetActive(false);
         mainMenu.SetActive(true);
         currentMenu = mainMenu;
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
