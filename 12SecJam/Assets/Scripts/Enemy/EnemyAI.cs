@@ -208,8 +208,7 @@ public class EnemyAI : MonoBehaviour
         
         if (collision.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerLife>().TakeDmg(1);
-
+            collision.gameObject.GetComponent<PlayerLife>().Die(gameObject.CompareTag("Boss"));
         }
     }
 }
