@@ -19,13 +19,13 @@ public class BackPackInteraction : Interaction
                 opened = true;
                 canInteract = false;
                 interactionImage.SetActive(false);
-                gm.StartCoroutine("DestroySubtitleFast");
+                gm.DestroyFast();
             }
             else if (canOpen && !isImageOpen)
             {
+                gm.PlayCLipAtPlayer(audioClip[0]);
                 gm.OpenInteractImage(interactionObject, this);
                 gm.DestroySubtitle(subtitleText, audioClip, false);
-                gm.PlayCLipAtPlayer(audioClip[0]);
             }
         }
     }

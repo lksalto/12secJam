@@ -63,9 +63,7 @@ public class GameManager : MonoBehaviour
             initialSubtitleObject.SetActive(false);
             // 
             StartCoroutine("DisableSubtitle");
-            
         }
-        audioClips.RemoveAt(0);
     }
 
     public void EndGame()
@@ -76,8 +74,14 @@ public class GameManager : MonoBehaviour
     public IEnumerator DisableSubtitle()
     {
         yield return new WaitForSeconds(subtitleTime);
+        audioClips.RemoveAt(0);
         initialSubtitleObject.SetActive(false);
         DestroySubtitle(subtitle, audioClips, hasMonsterAudio);
+    }
+
+    public void DestroyFast()
+    {
+        StartCoroutine("DisableSubtitleFast");
     }
     
     public IEnumerator DisableSubtitleFast()
@@ -88,8 +92,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.L)) // When Boss Spawns
-            FlickerLight();
+        // if(Input.GetKeyDown(KeyCode.L)) // When Boss Spawns
+        //     FlickerLight();
         
         // if((Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.E))) && interactionScript.isImageOpen)
         // {
