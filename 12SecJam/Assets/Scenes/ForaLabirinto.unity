@@ -5845,10 +5845,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: " 5 anos\u2026 5 anos e nada! Sem pistas, sem suspeitos. Nada. Parece que
+    todos est\xE3o deixando algo passar, algo que s\xF3 eu vejo. N\xE3o \xE9 sobre
+    quem levou minha filha, mas sim o que. E isso - isso acaba hoje!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b334a438dc36b4147baeeff625a34b34, type: 2}
+  m_sharedMaterial: {fileID: 2411890013474136625, guid: b334a438dc36b4147baeeff625a34b34, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5884,7 +5886,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -22.75
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -7480,7 +7482,7 @@ PrefabInstance:
     - target: {fileID: 3013627169046189705, guid: b6f667a37c99da14985eee2ab78d9b41, type: 3}
       propertyPath: interactionObject
       value: 
-      objectReference: {fileID: 21300000, guid: 209ca26091283a942a4c83bde69a710e, type: 3}
+      objectReference: {fileID: 21300000, guid: e5d08bb8a5197ff45848c336966b7108, type: 3}
     - target: {fileID: 4275591860646037440, guid: b6f667a37c99da14985eee2ab78d9b41, type: 3}
       propertyPath: m_Name
       value: InteractionObject
