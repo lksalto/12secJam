@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,24 +15,57 @@ public class GameManager : MonoBehaviour
     // [SerializeField] private Animator staminaImageAnim;
     [SerializeField] private Animator staminaContainerAnim;
     private Interaction interactionScript;
+
+    [SerializeField] private Image startLevelImage;
+    
+    [Header("Subtitles")]
+    [SerializeField] private GameObject initialSubtitleObject;
+    [SerializeField] private float subtitleTime = 10f;
+
+    [SerializeField] private AudioSource playerAudioSource;
     // Start is called before the first frame update
     void Start()
     {
-        // DontDestroyOnLoad(this.gameObject);
     }
 
+    public void PlayCLipAtPlayer(AudioClip audioClip)
+    {
+        playerAudioSource.clip = audioClip;
+        playerAudioSource.Play();
+    }
+    public void DestroySubtitle(string subtitle, AudioClip audioClip)
+    {
+        PlayCLipAtPlayer(audioClip);
+        subtitleTime = audioClip.length;
+        initialSubtitleObject.SetActive(true);
+        initialSubtitleObject.GetComponentInChildren<TextMeshProUGUI>().text = subtitle;
+        StartCoroutine("DisableSubtitle");
+    }
+
+    public IEnumerator DisableSubtitle()
+    {
+        yield return new WaitForSeconds(subtitleTime);
+        initialSubtitleObject.SetActive(false);
+    }
+    
+    public IEnumerator DisableSubtitleFast()
+    {
+        yield return new WaitForSeconds(2f);
+        initialSubtitleObject.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.L)) // When Boss Spawns
             FlickerLight();
         
-        if((Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.E))) && interactionScript.isImageOpen)
-        {
-            CloseInteractImage();
-        }
+        // if((Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.E))) && interactionScript.isImageOpen)
+        // {
+        //     CloseInteractImage();
+        // }
     }
 
+    
     public void NextScene()
     {
         //Transition
@@ -51,6 +85,7 @@ public class GameManager : MonoBehaviour
         interactionScript.canOpen = false;
         interactionZoom.SetActive(true);
         interactionImage.sprite = interactionObject;
+        interactionImage.SetNativeSize();
         this.interactionScript = interactionScript;
         StartCoroutine("ImageCooldown");
     }
