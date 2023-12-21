@@ -29,7 +29,7 @@ public class TorchPickup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             interactionImage.SetActive(true);
-            playerAnim = other.GetComponent<Animator>();
+            playerAnim = other.GetComponentInChildren<Animator>();
             canInteract = true;
         }
     }
