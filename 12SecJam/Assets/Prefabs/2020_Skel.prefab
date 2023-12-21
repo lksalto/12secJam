@@ -185,7 +185,7 @@ MonoBehaviour:
   targetLayers:
     serializedVersion: 2
     m_Bits: 72
-  rayCount: 35
+  rayCount: 20
   rayLength: 8
   wpPath: {fileID: 0}
   target: {fileID: 0}

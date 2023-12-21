@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7e7f5a524c34a3a45883bf20af33a08b
+guid: 0ff0f759346eb064fa4367339878cad4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 69
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 01
+      name: nurse_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 307
-        width: 89
-        height: 71
+        x: 58
+        y: 851
+        width: 59
+        height: 63
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c50a1f0f378ef6e438d7aa8f8a38a2e2
-      internalID: -345322056
+      spriteID: e48106bf816fa7640984b49b9eca9095
+      internalID: -1195231705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 02
+      name: nurse_1
       rect:
         serializedVersion: 2
-        x: 108
-        y: 307
-        width: 89
-        height: 71
+        x: 53
+        y: 767
+        width: 59
+        height: 62
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad7b106aa2877db45b507f38669056e6
-      internalID: -881526161
+      spriteID: fe4ed9b4329a56746925a5e0422d98a7
+      internalID: 866661178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 03
+      name: nurse_2
       rect:
         serializedVersion: 2
-        x: 202
-        y: 307
-        width: 89
-        height: 71
+        x: 60
+        y: 692
+        width: 59
+        height: 63
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffebd53283406ad49b582f839e8782d7
-      internalID: 1953392023
+      spriteID: 59742585a3040384a8c045be1ac9d0e7
+      internalID: -1915808320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 04
+      name: nurse_3
       rect:
         serializedVersion: 2
-        x: 296
-        y: 307
-        width: 89
-        height: 71
+        x: 60
+        y: 617
+        width: 59
+        height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,8 +213,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 042d84e2cc720b640b102a0ed783a03a
-      internalID: -395344703
+      spriteID: 019e66a10466c9c4eac09950d821d6e6
+      internalID: 1831342443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_4
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 526
+        width: 59
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5439487934affb84bbf2ff3816e78004
+      internalID: -2113067124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_5
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 420
+        width: 59
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39fd1df686d184540bc09f42be3d55db
+      internalID: 300292268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_6
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 335
+        width: 59
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c647e23031bab4282678f5818bc50e
+      internalID: -1645575742
       vertices: []
       indices: 
       edges: []
@@ -230,59 +293,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      01: -345322056
-      02: -881526161
-      03: 1953392023
-      04: -395344703
-      Drone_0: 636707352
-      Drone_1: -1297719038
-      Drone_10: 1965674358
-      Drone_11: 1056416426
-      Drone_12: -1258632497
-      Drone_13: -444186125
-      Drone_14: -1675978397
-      Drone_15: 1661278669
-      Drone_16: -1609058119
-      Drone_17: -1728503684
-      Drone_18: 507767381
-      Drone_19: -1877634533
-      Drone_2: 1608350874
-      Drone_20: 1776641351
-      Drone_21: -1437678440
-      Drone_22: 234086689
-      Drone_23: 1072285285
-      Drone_24: -1590745425
-      Drone_25: 801008739
-      Drone_26: 620228251
-      Drone_27: -2065220527
-      Drone_3: 1968506275
-      Drone_32: -965498367
-      Drone_33: 426175420
-      Drone_34: -272982626
-      Drone_35: 784977289
-      Drone_36: 41278419
-      Drone_37: 2122308701
-      Drone_38: 358732829
-      Drone_39: -1583352105
-      Drone_4: -225760446
-      Drone_40: -1031433753
-      Drone_41: -412387500
-      Drone_42: 1470272574
-      Drone_43: 1016908405
-      Drone_44: -1985666789
-      Drone_45: -497465566
-      Drone_46: -400705132
-      Drone_47: -914880472
-      Drone_48: -809575494
-      Drone_49: -766801638
-      Drone_5: 1170071527
-      Drone_50: -17995998
-      Drone_51: -1233328512
-      Drone_52: 1041209283
-      Drone_6: 1742932525
-      Drone_7: -1719631731
-      Drone_8: -1645449523
-      Drone_9: -1175991798
+      nurse_0: -1195231705
+      nurse_1: 866661178
+      nurse_2: -1915808320
+      nurse_3: 1831342443
+      nurse_4: -2113067124
+      nurse_5: 300292268
+      nurse_6: -1645575742
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

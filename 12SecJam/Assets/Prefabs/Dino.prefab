@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2402612034430830389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.206, y: -0.065, z: 0}
+  m_LocalPosition: {x: 0.042, y: -0.065, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -185,7 +185,7 @@ MonoBehaviour:
   targetLayers:
     serializedVersion: 2
     m_Bits: 72
-  rayCount: 6
+  rayCount: 20
   rayLength: 3
   wpPath: {fileID: 0}
   target: {fileID: 0}
