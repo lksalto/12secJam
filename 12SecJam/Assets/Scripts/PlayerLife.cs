@@ -17,6 +17,7 @@ public class PlayerLife : MonoBehaviour
 
     public void Die()
     {
+        Debug.Log("oi");
         //GetComponent<PlayerMovement>().enabled = false;
         //endScreen.SetActive(true);
     }
