@@ -6,7 +6,8 @@ using UnityEngine.UIElements;
 public class StartLevel : MonoBehaviour
 {
     [SerializeField] private string text;
-    [SerializeField] private AudioClip audioClip;
+    [SerializeField] private List<AudioClip> audioClip;
+    [SerializeField] private bool hasMonsterAudio;
     public void StartGame()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().enabled = true;
@@ -15,7 +16,7 @@ public class StartLevel : MonoBehaviour
     public void PlayAudio()
     {
         if(audioClip != null)
-            FindObjectOfType<GameManager>().DestroySubtitle(text, audioClip);
+            FindObjectOfType<GameManager>().DestroySubtitle(text, audioClip, hasMonsterAudio);
     }
 
 }
