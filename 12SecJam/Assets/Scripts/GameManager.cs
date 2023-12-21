@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.SceneManagement;
 
 using UnityEngine.UI;
@@ -21,8 +22,13 @@ public class GameManager : MonoBehaviour
     [Header("Subtitles")]
     [SerializeField] private GameObject initialSubtitleObject;
     [SerializeField] private float subtitleTime = 10f;
-
+    [SerializeField] private string subtitle;
+    [SerializeField] private List<AudioClip> audioClips;
+     private bool hasMonsterAudio;
     [SerializeField] private AudioSource playerAudioSource;
+    
+    [Header("EndGame")]
+    [SerializeField] private GameObject endGameMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,19 +39,45 @@ public class GameManager : MonoBehaviour
         playerAudioSource.clip = audioClip;
         playerAudioSource.Play();
     }
-    public void DestroySubtitle(string subtitle, AudioClip audioClip)
+    public void DestroySubtitle(string subtitle, List<AudioClip> audioClips, bool hasMonsterAudio)
     {
-        PlayCLipAtPlayer(audioClip);
-        subtitleTime = audioClip.length;
-        initialSubtitleObject.SetActive(true);
-        initialSubtitleObject.GetComponentInChildren<TextMeshProUGUI>().text = subtitle;
-        StartCoroutine("DisableSubtitle");
+        this.hasMonsterAudio = hasMonsterAudio;
+        if ((audioClips.Count > 0 && !hasMonsterAudio) || (audioClips.Count > 1 && hasMonsterAudio))
+        {
+            this.audioClips = audioClips;
+            this.subtitle = subtitle;
+            AudioClip audioClip = audioClips[0];
+            PlayCLipAtPlayer(audioClip);
+            subtitleTime = audioClip.length;
+            initialSubtitleObject.SetActive(true);
+            initialSubtitleObject.GetComponentInChildren<TextMeshProUGUI>().text = subtitle;
+            StartCoroutine("DisableSubtitle");
+        }
+        else if(audioClips.Count == 1 && hasMonsterAudio)
+        {
+            this.audioClips = audioClips;
+            this.subtitle = subtitle;
+            AudioClip audioClip = audioClips[0];
+            PlayCLipAtPlayer(audioClip);
+            subtitleTime = audioClip.length;
+            initialSubtitleObject.SetActive(false);
+            // 
+            StartCoroutine("DisableSubtitle");
+            
+        }
+        audioClips.RemoveAt(0);
+    }
+
+    public void EndGame()
+    {
+        endGameMenu.SetActive(true);
     }
 
     public IEnumerator DisableSubtitle()
     {
         yield return new WaitForSeconds(subtitleTime);
         initialSubtitleObject.SetActive(false);
+        DestroySubtitle(subtitle, audioClips, hasMonsterAudio);
     }
     
     public IEnumerator DisableSubtitleFast()
@@ -129,6 +161,15 @@ public class GameManager : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }

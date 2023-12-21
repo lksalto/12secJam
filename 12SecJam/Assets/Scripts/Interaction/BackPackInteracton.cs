@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class BackPackInteraction : Interaction
 {
     private bool opened;
-    [SerializeField] AudioClip audioClip;
+    [SerializeField] List<AudioClip> audioClip;
     [SerializeField] string subtitleText;
     private void Update()
     {
@@ -24,8 +24,8 @@ public class BackPackInteraction : Interaction
             else if (canOpen && !isImageOpen)
             {
                 gm.OpenInteractImage(interactionObject, this);
-                gm.DestroySubtitle(subtitleText, audioClip);
-                gm.PlayCLipAtPlayer(audioClip);
+                gm.DestroySubtitle(subtitleText, audioClip, false);
+                gm.PlayCLipAtPlayer(audioClip[0]);
             }
         }
     }
