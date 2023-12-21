@@ -7022,7 +7022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &4508305859476756849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7599,5 +7599,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionImage: {fileID: 1878035461}
-  playerAnimController: {fileID: 9100000, guid: f5f601c3189904649998257beb0aa61e, type: 2}
   torch: {fileID: 597641319}
