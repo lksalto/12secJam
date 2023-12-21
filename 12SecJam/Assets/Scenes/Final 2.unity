@@ -4280,7 +4280,9 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: e43f3c9af9b90284b8eaf5ec07139314, type: 3}
     - target: {fileID: 1316800872461013854, guid: 55b6c0e4674232844837964376ac60d1, type: 3}
       propertyPath: m_text
-      value: 
+      value: 'OBRIGADO
+
+        POR JOGADR'
       objectReference: {fileID: 0}
     - target: {fileID: 1316800872461013854, guid: 55b6c0e4674232844837964376ac60d1, type: 3}
       propertyPath: m_fontAsset
