@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8623029310775756856}
   - component: {fileID: 5202021842724985638}
   - component: {fileID: 1727381467314896845}
+  - component: {fileID: 2754585075630898968}
+  - component: {fileID: 3395746465063836268}
   m_Layer: 9
   m_Name: Circle
   m_TagString: Untagged
@@ -40,7 +42,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2402612034430830389}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -73,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: -1515359512, guid: 1b9206da8acfde8489d131d86925bd55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -106,6 +108,53 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!58 &2754585075630898968
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2402612034430830389}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.97
+--- !u!114 &3395746465063836268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2402612034430830389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f42d25d869f25e438a02370629f891d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6773217613058379473
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +173,7 @@ GameObject:
   m_Layer: 9
   m_Name: Boss
   m_TagString: Boss
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -142,7 +191,7 @@ Transform:
   m_Children:
   - {fileID: 8623029310775756856}
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &511227206448686896
 MonoBehaviour:
@@ -179,7 +228,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6773217613058379473}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b47cfda636dff64fab7f85acd8fb77c, type: 3}
   m_Name: 
@@ -194,6 +243,7 @@ MonoBehaviour:
   speed: 2
   followTime: 9999
   nextWaypointDistance: 0
+  isAlive: 0
   state: 0
 --- !u!114 &7643307251226559327
 MonoBehaviour:
@@ -202,14 +252,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6773217613058379473}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 670f3d05b5c3d4641aadae5509950c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioclip: {fileID: 8300000, guid: 3e9269de068add148b00dbfe5193f663, type: 3}
   isBoss: 1
-  player: {fileID: 0}
+  distanceToPlaySound: 8
 --- !u!50 &4375726027949004339
 Rigidbody2D:
   serializedVersion: 4

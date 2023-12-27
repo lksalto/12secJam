@@ -281,7 +281,7 @@ Transform:
   - {fileID: 645024505907085267}
   - {fileID: 5048965899595316445}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1853857388549927083
 MonoBehaviour:
@@ -343,7 +343,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
-  endScreen: {fileID: 0}
   jumpscare: {fileID: 12883999736379600}
 --- !u!70 &897112616164355411
 CapsuleCollider2D:
@@ -489,7 +488,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2561474090513351614}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.7832456, y: 1.7832456, z: 1.7832456}
   m_ConstrainProportionsScale: 0
@@ -537,7 +536,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 10
   m_Sprite: {fileID: -399410532, guid: 50f36f03299f96e46a7cde0ce1ab4669, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

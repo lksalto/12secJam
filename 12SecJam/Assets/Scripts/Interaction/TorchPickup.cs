@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TorchPickup : MonoBehaviour
 {
@@ -10,11 +6,13 @@ public class TorchPickup : MonoBehaviour
     private Animator playerAnim;
     [SerializeField] GameObject interactionImage;
     [SerializeField] private GameObject torch;
+    [SerializeField] RuntimeAnimatorController playerAnimController;   
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {
             //Change player sprite
+            playerAnim.runtimeAnimatorController = playerAnimController;
             //Destroy torch
             torch.SetActive(true);
             Destroy(this.gameObject);

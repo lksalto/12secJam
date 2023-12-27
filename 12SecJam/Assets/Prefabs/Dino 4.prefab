@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 543562551, guid: f596d6cfff03b8040a5ee1ac4cf04aa4, type: 3}
   m_Color: {r: 0.7493692, g: 0.9716981, b: 0.73794055, a: 1}
   m_FlipX: 0
@@ -140,7 +140,7 @@ Transform:
   m_Children:
   - {fileID: 8623029310775756856}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 162
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &511227206448686896
 MonoBehaviour:
@@ -189,9 +189,10 @@ MonoBehaviour:
   rayLength: 3
   wpPath: {fileID: 0}
   target: {fileID: 0}
-  speed: 5
+  speed: 3
   followTime: 4
   nextWaypointDistance: 0
+  isAlive: 1
   state: 0
 --- !u!50 &4375726027949004339
 Rigidbody2D:
@@ -252,6 +253,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01225245, y: -0.008051932}
-  m_Size: {x: 0.1902079, y: 0.23925316}
+  m_Offset: {x: 0.0047512054, y: -0.103817835}
+  m_Size: {x: 0.07299805, y: 0.08433321}
   m_Direction: 0

@@ -11,9 +11,9 @@ public class BossSpawn : MonoBehaviour
 
     private void Start()
     {
-        enemyAI = GetComponent<EnemyAI>();
-        enemyAudio = GetComponent<EnemyAudio>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        enemyAI = GetComponentInParent<EnemyAI>();
+        enemyAudio = GetComponentInParent<EnemyAudio>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -23,6 +23,10 @@ public class BossSpawn : MonoBehaviour
             spriteRenderer.enabled = true;
             enemyAI.enabled = true;
             enemyAudio.enabled = true;
+            this.enabled = false;
+            FindObjectOfType<GameManager>().FlickerLight();
+            GetComponent<CircleCollider2D>().enabled = false;
+            enemyAI.StartCoroutine("WakeUp");
         }
     }
 }

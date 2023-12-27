@@ -1,15 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 using UnityEngine.UIElements;
+using Random = UnityEngine.Random;
 
 public class EnemyAI : MonoBehaviour
 {
     public LayerMask targetLayers;
     public int rayCount = 20;
     public float rayLength = 5f;
-    float raySpreadAngle = 360f;
+    float raySpreadAngle = 180f;
     Transform playerTransf;
     [SerializeField] GameObject wpPath;
     List<GameObject> waypoints;
@@ -26,6 +28,9 @@ public class EnemyAI : MonoBehaviour
     Seeker seeker;
     Rigidbody2D rb;
     SpriteRenderer sr;
+    public bool isAlive = true;
+    public bool passive = false;
+    private bool hasToFlip;
 
     enum SeekerState
     {
@@ -58,10 +63,12 @@ public class EnemyAI : MonoBehaviour
     }
     private void Update()
     {
-        CastRaycasts();
+        if(!passive)
+            CastRaycasts();
         if (target != null) 
         {
-            sr.flipX = target.transform.position.x < transform.position.x;
+            hasToFlip = target.transform.position.x < transform.position.x;
+            sr.flipX = hasToFlip;
         }
     }
 
@@ -92,7 +99,14 @@ public class EnemyAI : MonoBehaviour
     {
         if(seeker.IsDone())
         {
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
+            try
+            {
+                seeker.StartPath(rb.position, target.position, OnPathComplete);
+            }
+            catch (Exception e)
+            {
+                // ignored
+            }
         }
         
     }
@@ -112,7 +126,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            float distance2 = Vector2.Distance(transform.position, (Vector2)path.vectorPath[currentWaypoint]);
+            // float distance2 = Vector2.Distance(transform.position, (Vector2)path.vectorPath[currentWaypoint]);
             transform.position = Vector2.Lerp(transform.position, (Vector2)path.vectorPath[currentWaypoint + 1], speed * Time.fixedDeltaTime);
 
             reachedEndOfPath = false;
@@ -134,25 +148,31 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-
-            if(Vector2.Distance(target.transform.position, transform.position) < 0.3f)
+            try
             {
-                if (waypointIndex >= waypoints.Count-1)
+                if (Vector2.Distance(target.transform.position, transform.position) < 0.3f)
                 {
-                    waypointIndex = 0;
+                    if (waypointIndex >= waypoints.Count - 1)
+                    {
+                        waypointIndex = 0;
+
+                    }
+                    else
+                    {
+                        waypointIndex++;
+                    }
+
+                    target = waypoints[waypointIndex].transform;
+
 
                 }
                 else
                 {
-                    waypointIndex++;
+                    GoToTarget();
                 }
-                target = waypoints[waypointIndex].transform;
-
-
             }
-            else
+            catch (Exception e)
             {
-                GoToTarget();
             }
         }
     }
@@ -164,7 +184,9 @@ public class EnemyAI : MonoBehaviour
         for (int i = 0; i < rayCount; i++)
         {
             float angle = i * angleStep;
-            Vector2 direction = Quaternion.Euler(0, 0, angle) * transform.right;
+            if(!hasToFlip)
+                angle = -angle;
+            Vector2 direction = Quaternion.Euler(0, 0, angle) * transform.up;
 
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, rayLength, targetLayers);
 
@@ -202,11 +224,26 @@ public class EnemyAI : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawSphere(transform.position, 0.1f);
     }
+
+    public IEnumerator WakeUp()
+    {
+        yield return new WaitForSeconds(1f);
+        isAlive = true;
+    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && isAlive && !passive)
         {
             collision.gameObject.GetComponentInParent<PlayerLife>().Die(gameObject.CompareTag("Boss"));
         }
     }
+
+    // private void OnCollisionEnter2D(Collision2D other)
+    // {
+    //     if (other.gameObject.CompareTag("Player"))
+    //     {
+    //         other.gameObject.GetComponentInParent<PlayerLife>().Die(gameObject.CompareTag("Boss"));
+    //     }
+    // }
 }

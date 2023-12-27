@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: -2085742755, guid: ea53ccf21be0e2842a0c23720c6faefe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -192,7 +192,7 @@ Transform:
   m_Children:
   - {fileID: 8210217441674392016}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &4375726027949004339
 Rigidbody2D:
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670f3d05b5c3d4641aadae5509950c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioclip: {fileID: 8300000, guid: 9268b9f68839fc948809c05306e9858d, type: 3}
+  audioclip: {fileID: 8300000, guid: 607a783acd6c41349a5ba471b5d6ad57, type: 3}
   isBoss: 0
   distanceToPlaySound: 5
 --- !u!82 &5258449788957210578

@@ -46,7 +46,7 @@ public class EnemyAudio : MonoBehaviour
             gm = FindObjectOfType<GameManager>();
 
         int random = UnityEngine.Random.Range(0, 10);
-        if(random < 5)
+        if(random < 8)
             gm.FlickerLight();
     }
 }

@@ -1461,6 +1461,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3114413708011527074, guid: 0e54442664ad0754a85cdf4a5fe8106c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.28
+      objectReference: {fileID: 0}
     - target: {fileID: 7888729105793670190, guid: 0e54442664ad0754a85cdf4a5fe8106c, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1504,6 +1508,18 @@ PrefabInstance:
     - target: {fileID: 7888729105793670190, guid: 0e54442664ad0754a85cdf4a5fe8106c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966777203330073527, guid: 0e54442664ad0754a85cdf4a5fe8106c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966777203330073527, guid: 0e54442664ad0754a85cdf4a5fe8106c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8072012
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966777203330073527, guid: 0e54442664ad0754a85cdf4a5fe8106c, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.54112315
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4288,6 +4304,7 @@ MonoBehaviour:
   speed: 60
   followTime: 5
   nextWaypointDistance: 0
+  isAlive: 1
   state: 0
 --- !u!1 &1149260849
 GameObject:
@@ -5913,6 +5930,7 @@ MonoBehaviour:
   speed: 140
   followTime: 5
   nextWaypointDistance: 0
+  isAlive: 1
   state: 0
 --- !u!114 &1671156623
 MonoBehaviour:
@@ -7345,7 +7363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &4508305859476756849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7504,6 +7522,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 156881766174517740, guid: 55b6c0e4674232844837964376ac60d1, type: 3}
       propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e682a7227d15c546b06e3e8bbda012c, type: 3}
+    - target: {fileID: 156881766174517740, guid: 55b6c0e4674232844837964376ac60d1, type: 3}
+      propertyPath: audioClip.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 156881766174517740, guid: 55b6c0e4674232844837964376ac60d1, type: 3}
+      propertyPath: audioClip.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 3e682a7227d15c546b06e3e8bbda012c, type: 3}
     - target: {fileID: 1035472196675304371, guid: 55b6c0e4674232844837964376ac60d1, type: 3}
@@ -7888,6 +7914,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5940744517998879401, guid: f0782a021386ba342887b91341a0884c, type: 3}
+      propertyPath: m_Radius
+      value: 0.48
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7942,3 +7972,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionImage: {fileID: 1878035461}
   torch: {fileID: 597641319}
+  playerAnimController: {fileID: 9100000, guid: f5f601c3189904649998257beb0aa61e, type: 2}

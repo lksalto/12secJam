@@ -5376,6 +5376,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7735814217212831055, guid: 51e27f7493167ab4b87e7b4d9feb1cb9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735814217212831055, guid: 51e27f7493167ab4b87e7b4d9feb1cb9, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9397933
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735814217212831055, guid: 51e27f7493167ab4b87e7b4d9feb1cb9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.49050266
+      objectReference: {fileID: 0}
     - target: {fileID: 8994460506267075212, guid: 51e27f7493167ab4b87e7b4d9feb1cb9, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -7464,6 +7476,7 @@ MonoBehaviour:
   speed: 60
   followTime: 5
   nextWaypointDistance: 0
+  isAlive: 1
   state: 0
 --- !u!114 &1086518164 stripped
 MonoBehaviour:
@@ -9672,6 +9685,7 @@ MonoBehaviour:
   speed: 140
   followTime: 5
   nextWaypointDistance: 0
+  isAlive: 1
   state: 0
 --- !u!114 &1671156623
 MonoBehaviour:
