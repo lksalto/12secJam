@@ -9486,7 +9486,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 129837387416396333, guid: 615b649f8eca5b2438f41be35619ec4d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 615b649f8eca5b2438f41be35619ec4d, type: 3}
@@ -18199,7 +18200,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 243363227}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7267233321769150666, guid: 3c92d5b4ecd129947a00f393017fcff5, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c92d5b4ecd129947a00f393017fcff5, type: 3}
@@ -18497,7 +18499,8 @@ PrefabInstance:
       value: Soul
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4000018677353750565, guid: eeac00e618206a1418d33bc9c5b741c8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eeac00e618206a1418d33bc9c5b741c8, type: 3}
@@ -18688,7 +18691,8 @@ PrefabInstance:
       value: Rat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5832698502386405971, guid: ad5df6164539a7948b17d9729e3a0dff, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad5df6164539a7948b17d9729e3a0dff, type: 3}

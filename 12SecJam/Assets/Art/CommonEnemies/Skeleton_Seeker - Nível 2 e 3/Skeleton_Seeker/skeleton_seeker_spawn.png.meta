@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b32431fa3cd34b14d9d944c801644cc3
+guid: b9162ae01a68d9145902d8b09c3e101a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,112 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: skeleton seeker ofc esse aqui corrigido_0
+      name: skeleton_seeker_spawn_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf0d392147e6e048a4de3eb0364216b
+      internalID: -885460628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_seeker_spawn_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12145459ad72eb47a1ed6beb5d96ca8
+      internalID: -1249861366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_seeker_spawn_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d153d8bfc753ed646839c4195f689a7f
+      internalID: 284947310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_seeker_spawn_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 840
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9576a0ae509551a4f91429623238d8ed
+      internalID: 777469104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_seeker_spawn_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f699eddd4a0ae349ba4d7dfe691ab0f
+      internalID: -2025679067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_seeker_spawn_5
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95c1933cf2133f24da28e306afe881b3
-      internalID: -20239047
+      spriteID: 6f80d5aa51280014ab06098fea54fb4f
+      internalID: -971389313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton seeker ofc esse aqui corrigido_1
+      name: skeleton_seeker_spawn_6
       rect:
         serializedVersion: 2
         x: 0
@@ -158,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d00dbf412b9e224d83d00f6de464488
-      internalID: -1463827090
+      spriteID: 3a4d2400f411bc94db98ac31d1818785
+      internalID: -2074826292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton seeker ofc esse aqui corrigido_2
+      name: skeleton_seeker_spawn_7
       rect:
         serializedVersion: 2
         x: 0
@@ -179,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb81aa38d0f6138499135dad27843213
-      internalID: 1416768844
+      spriteID: e3ca2cdd170bf3c4880166ad8cbd6c87
+      internalID: -621275057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton seeker ofc esse aqui corrigido_3
+      name: skeleton_seeker_spawn_8
       rect:
         serializedVersion: 2
         x: 0
@@ -200,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18c85c4ce31e1f144b82770089370cf0
-      internalID: 1482139487
+      spriteID: 119fe64e834ab7447994c97e03777a4f
+      internalID: -165401970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton seeker ofc esse aqui corrigido_4
+      name: skeleton_seeker_spawn_9
       rect:
         serializedVersion: 2
         x: 0
@@ -221,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd02bf8359a37074eacfc97a7d8e08d8
-      internalID: 302237080
+      spriteID: 04d4803335bb7a442ab489763f32956e
+      internalID: -1118801246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton seeker ofc esse aqui corrigido_5
+      name: skeleton_seeker_spawn_10
       rect:
         serializedVersion: 2
         x: 0
@@ -242,8 +347,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2026fa4d668b02f4599510c6ebdce38d
-      internalID: 856147259
+      spriteID: 578de0b625189e441b58dbd27a804803
+      internalID: -1705148199
       vertices: []
       indices: 
       edges: []
@@ -259,12 +364,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      skeleton seeker ofc esse aqui corrigido_0: -20239047
-      skeleton seeker ofc esse aqui corrigido_1: -1463827090
-      skeleton seeker ofc esse aqui corrigido_2: 1416768844
-      skeleton seeker ofc esse aqui corrigido_3: 1482139487
-      skeleton seeker ofc esse aqui corrigido_4: 302237080
-      skeleton seeker ofc esse aqui corrigido_5: 856147259
+      skeleton_seeker_spawn_0: -885460628
+      skeleton_seeker_spawn_1: -1249861366
+      skeleton_seeker_spawn_10: -1705148199
+      skeleton_seeker_spawn_2: 284947310
+      skeleton_seeker_spawn_3: 777469104
+      skeleton_seeker_spawn_4: -2025679067
+      skeleton_seeker_spawn_5: -971389313
+      skeleton_seeker_spawn_6: -2074826292
+      skeleton_seeker_spawn_7: -621275057
+      skeleton_seeker_spawn_8: -165401970
+      skeleton_seeker_spawn_9: -1118801246
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

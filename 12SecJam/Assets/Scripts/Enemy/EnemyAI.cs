@@ -48,6 +48,8 @@ public class EnemyAI : MonoBehaviour
         InvokeRepeating("UpdatePath", 0f, 0.3f);
         state = SeekerState.ZANZANDO;
         waypoints = new List<GameObject>();
+        if(wpPath != null)
+            wpPath.transform.SetParent(transform.parent);
         if (gameObject.CompareTag("Boss"))
         {
             playerTransf = FindObjectOfType<PlayerLife>().transform;
@@ -236,6 +238,7 @@ public class EnemyAI : MonoBehaviour
         if (collision.CompareTag("Player") && isAlive && !passive)
         {
             collision.gameObject.GetComponentInParent<PlayerLife>().Die(gameObject.CompareTag("Boss"));
+            Debug.Log("Ded");
         }
     }
 
